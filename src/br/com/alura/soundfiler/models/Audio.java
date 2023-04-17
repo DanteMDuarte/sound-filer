@@ -5,6 +5,7 @@ public class Audio {
     private int durationInMinutes;
     private int totalOfReproductions;
     private int totalOfLikes;
+    private int classification;
 
     public String getTitle() {
         return title;
@@ -26,16 +27,19 @@ public class Audio {
         return totalOfReproductions;
     }
 
-    public void reproduceIt(int reproduction) {
-        totalOfReproductions += reproduction;
-    }
-
     public int getTotalOfLikes() {
         return totalOfLikes;
     }
 
-    public void likeIt(int newLike) {
-        totalOfLikes += newLike;
+    public int getClassification() {
+        return classification;
     }
 
+    public void likeIt() {
+        this.totalOfLikes++;
+    }
+
+    public void reproduceIt() {
+        this.totalOfReproductions++;
+    }
 }
